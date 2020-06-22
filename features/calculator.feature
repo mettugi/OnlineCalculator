@@ -1,12 +1,20 @@
 Feature: Test online calculator scenarios
 Scenario Outline: Test subtraction, division and CE functionalities
 Given Open chrome browser and start application
-When I enter following values and press CE button
-			|value1 | <value1>|
-			|value2 | <value2>|
-			|operator | <operator>|			
+When I enter following values and press = button
+			|value1 | <1>|
+			|value2 | <1>|
+			|operator | <+>|			
 Then I should be able to see
-			|	expected |<expected>|
-Examples:
-		| value1  		| value2 		| operator			| expected	|
-    	| 	2 			|   2			|		/			| 1			|
+			|	expected |<2>|
+		
+Feature: Test online calculator scenarios
+Scenario Outline: Test subtraction, division and CE functionalities
+Given Open chrome browser and start application
+When I enter following values and press = button
+			|value1 | <2>|
+			|value2 | <2>|
+			|operator | </>|			
+Then I should be able to see
+			|	expected |<1>|
+		
